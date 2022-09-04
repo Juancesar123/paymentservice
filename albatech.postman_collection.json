@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "fc1dcfb7-f318-4fc7-94d1-c94ee6623155",
+		"name": "albatech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blog Service",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"juancesarandrianto@gmail.com\",\n    \"password\" : \"sayangkmu12\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIyNTQ5ODQsImV4cCI6MTY2MjI1ODU4NCwibmJmIjoxNjYyMjU0OTg0LCJqdGkiOiJrekxjRUQ3R0R0QzlmdEVxIiwic3ViIjoiNjMxMjE5YWYxODViMzU1NzQzMGZkNmMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.TkE2G2NevTX1UbDcaVz6rv1BlmN5gfdg7dUFSZRuztY"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register new",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"juancesarandrianto@gmail.com\",\n    \"name\" : \"juan ceasar andrianto\",\n    \"password\": \"sayangkmu12\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Blog",
+					"item": [
+						{
+							"name": "get Blog",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDQ5NjAsImV4cCI6MTY2MjEwODU2MCwibmJmIjoxNjYyMTA0OTYwLCJqdGkiOiI1TXhOaUVpMmdPamd6SnFBIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.VN9LWNmtrqs5nsUKV4au5PGarzQiVzw3ms57stKQvTo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/blog",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"blog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Blog",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxOTkxNjUsImV4cCI6MTY2MjIwMjc2NSwibmJmIjoxNjYyMTk5MTY1LCJqdGkiOiJ5dTVVTTdTVm9hSUZqSDNmIiwic3ViIjoiNjMxMjE5YWYxODViMzU1NzQzMGZkNmMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.XuG_kjVnaOKQis_f4UiBoQlBGZP_RtENPGVMncfkWu4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"mari kita jaga lingkungan kita\",\n    \"description\" : \"mari oke oce\",\n    \"tag\":[{\n        \"name\" : \"hiburan\"\n    }],\n    \"category\" : \"631219d7185b3557430fd6c3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/blog",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"blog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete blog",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxOTkxNjUsImV4cCI6MTY2MjIwMjc2NSwibmJmIjoxNjYyMTk5MTY1LCJqdGkiOiJ5dTVVTTdTVm9hSUZqSDNmIiwic3ViIjoiNjMxMjE5YWYxODViMzU1NzQzMGZkNmMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.XuG_kjVnaOKQis_f4UiBoQlBGZP_RtENPGVMncfkWu4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/blog/631325e0d5c7b63ce20212c2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"blog",
+										"631325e0d5c7b63ce20212c2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update blog",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"mari kita jaga lingkungan kita\",\n    \"description\" : \"mari oke oce\",\n    \"tag\":[{\n        \"name\" : \"hiburan\"\n    }],\n    \"category\" : \"631219d7185b3557430fd6c3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/blog/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"blog",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Get Category",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIyNTQ5ODQsImV4cCI6MTY2MjI1ODU4NCwibmJmIjoxNjYyMjU0OTg0LCJqdGkiOiJrekxjRUQ3R0R0QzlmdEVxIiwic3ViIjoiNjMxMjE5YWYxODViMzU1NzQzMGZkNmMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.TkE2G2NevTX1UbDcaVz6rv1BlmN5gfdg7dUFSZRuztY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/category?limit=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDQ5NjAsImV4cCI6MTY2MjEwODU2MCwibmJmIjoxNjYyMTA0OTYwLCJqdGkiOiI1TXhOaUVpMmdPamd6SnFBIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.VN9LWNmtrqs5nsUKV4au5PGarzQiVzw3ms57stKQvTo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Hiburan\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDQ5NjAsImV4cCI6MTY2MjEwODU2MCwibmJmIjoxNjYyMTA0OTYwLCJqdGkiOiI1TXhOaUVpMmdPamd6SnFBIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.VN9LWNmtrqs5nsUKV4au5PGarzQiVzw3ms57stKQvTo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Hiburan\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/category/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDQ5NjAsImV4cCI6MTY2MjEwODU2MCwibmJmIjoxNjYyMTA0OTYwLCJqdGkiOiI1TXhOaUVpMmdPamd6SnFBIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.VN9LWNmtrqs5nsUKV4au5PGarzQiVzw3ms57stKQvTo",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/category/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"category",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tag",
+					"item": [
+						{
+							"name": "Get Tag",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDAyODQsImV4cCI6MTY2MjEwMzg4NCwibmJmIjoxNjYyMTAwMjg0LCJqdGkiOiIzb3FPTnU2V2FBUUI1QlFFIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.AlpNGApdqio81ZRe7bIRc7Iqi8EeuAJM174UT2jOrAs",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/tag",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tag"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Tag",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDAyODQsImV4cCI6MTY2MjEwMzg4NCwibmJmIjoxNjYyMTAwMjg0LCJqdGkiOiIzb3FPTnU2V2FBUUI1QlFFIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.AlpNGApdqio81ZRe7bIRc7Iqi8EeuAJM174UT2jOrAs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Camry\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/tag",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tag"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Tag",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDAyODQsImV4cCI6MTY2MjEwMzg4NCwibmJmIjoxNjYyMTAwMjg0LCJqdGkiOiIzb3FPTnU2V2FBUUI1QlFFIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.AlpNGApdqio81ZRe7bIRc7Iqi8EeuAJM174UT2jOrAs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Baleno\",\n    \"brand\" : \"Suzuki\",\n    \"cc\" : 2500\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/tag/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"tag",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Tag",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIxMDAyODQsImV4cCI6MTY2MjEwMzg4NCwibmJmIjoxNjYyMTAwMjg0LCJqdGkiOiIzb3FPTnU2V2FBUUI1QlFFIiwic3ViIjoiNjMwNmYyNTYwYTY4MjZiZjY3MDFjNmQyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.AlpNGApdqio81ZRe7bIRc7Iqi8EeuAJM174UT2jOrAs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Camry\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/tag/{id}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"tag",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Payment Service",
+			"item": [
+				{
+					"name": "Get Balance",
+					"item": [
+						{
+							"name": "http://localhost:8001/api/get-balance",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIyNTQ5ODQsImV4cCI6MTY2MjI1ODU4NCwibmJmIjoxNjYyMjU0OTg0LCJqdGkiOiJrekxjRUQ3R0R0QzlmdEVxIiwic3ViIjoiNjMxMjE5YWYxODViMzU1NzQzMGZkNmMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.TkE2G2NevTX1UbDcaVz6rv1BlmN5gfdg7dUFSZRuztY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8001/api/get-balance",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"get-balance"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Invoice",
+					"item": [
+						{
+							"name": "Create Invoice",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE2NjIyNzU1NDAsImV4cCI6MTY2MjI3OTE0MCwibmJmIjoxNjYyMjc1NTQwLCJqdGkiOiJjcVdwamp3ZFhJbjNyNEZDIiwic3ViIjoiNjMxMjE5YWYxODViMzU1NzQzMGZkNmMyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.w1as_gzijG655LjNn28Hrv_WXzdqGEt6ylntIR5jttw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ex_id\":\"aaabbbccc\",\n    \"description\" : \"aasasa\",\n    \"product_name\" : \"adadeh\",\n    \"amount\" : 12000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/api/create-invoice",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"api",
+										"create-invoice"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
